@@ -8,11 +8,6 @@ const Users =()=>{
 
 const[usersList, setUsersList]=useState([]);
 const[isAddMenu,setIsAddMenu]=useState(false);
-// const[firstName, setFirstname]=useState('');
-//     const[lastName, setLastname]=useState('');
-//     const[cash, setCash]=useState(0);
-//     const[credit, setCredit]=useState(0);
-//     const[id, setId]=useState(0);
 const[newUser,setNewUser]=useState({first:'gdfgdfgt',
 last:'gdfgt',cash:'20',credit:'10',id:'3210'})
 
@@ -22,10 +17,6 @@ last:'gdfgt',cash:'20',credit:'10',id:'3210'})
         console.log(e.target.value)
 
     }
-        // async function fetchSomething() {
-        // const {data} = await axios.get(CURRENT_URL)
-        //     console.log(data)
-        // }
 
     const deleteUser= async (id)=>{
     try{
