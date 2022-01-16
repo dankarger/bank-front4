@@ -95,7 +95,7 @@ useEffect(()=>{
             .then(data=>{
 
             setUsersList(data.data)
-                console.log('u',usersList)
+
         });
         }catch(e){
             throw Error(e.message)
