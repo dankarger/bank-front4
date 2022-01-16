@@ -8,11 +8,11 @@ const Users =()=>{
 
 const[usersList, setUsersList]=useState([]);
 const[isAddMenu,setIsAddMenu]=useState(false);
-const[firstName, setFirstname]=useState('');
-    const[lastName, setLastname]=useState('');
-    const[cash, setCash]=useState(0);
-    const[credit, setCredit]=useState(0);
-    const[id, setId]=useState(0);
+// const[firstName, setFirstname]=useState('');
+//     const[lastName, setLastname]=useState('');
+//     const[cash, setCash]=useState(0);
+//     const[credit, setCredit]=useState(0);
+//     const[id, setId]=useState(0);
 const[newUser,setNewUser]=useState({first:'t',
 last:'t',cash:20,credit:10,id:3210})
 
@@ -43,9 +43,9 @@ last:'t',cash:20,credit:10,id:3210})
     const viewUser=(id)=>{
     }
 
-    const handleAddUser = () => {
-        // http://127.0.0.1:3000/users
-    }
+    // const handleAddUser = () => {
+    //     // http://127.0.0.1:3000/users
+    // }
 
     const showUsers=()=> {
         if(usersList.length>0) {
