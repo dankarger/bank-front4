@@ -70,7 +70,11 @@ last:'t',cash:20,credit:10,id:3210})
     const addUserToServer= async ()=>{
         try {
             console.log(newUser)
-            await axios.post(URL +'/users',{data:newUser})
+            await axios.post(URL +'/users',{data:{newUser}, headers: {
+                            'Content-Type': 'application/json',
+                            'Accept': 'application/json',
+                            'mode':"no-cors"
+                        }})
                 .then(data=>{
                 console.log('dd',data)
 
