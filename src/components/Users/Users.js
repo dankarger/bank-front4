@@ -14,10 +14,10 @@ const[isAddMenu,setIsAddMenu]=useState(false);
 //     const[credit, setCredit]=useState(0);
 //     const[id, setId]=useState(0);
 const[newUser,setNewUser]=useState({first:'gdfgdfgt',
-last:'gdfgt',cash:20,credit:10,id:3210})
+last:'gdfgt',cash:'20',credit:'10',id:'3210'})
 
     const handleChange=(e)=> {
-        setNewUser({[e.target.name]:[...e.target.value]})
+        setNewUser({[e.target.name]:e.target.value})
 
         console.log(e.target.value)
 
@@ -70,11 +70,7 @@ last:'gdfgt',cash:20,credit:10,id:3210})
     const addUserToServer= async ()=>{
         try {
             console.log(newUser)
-            await axios.post(URL +'/users',{data:{id:+newUser.id,cash:+newUser.cash,first:newUser.first,last:newUser.last,credit:+newUser.credit}, headers: {
-                            // 'Accept': 'application/json',
-                    'Content-Type' : 'text/plain',
-                    // 'mode':"no-cors"
-                        }})
+            await axios.post(URL +'/users',{id:newUser.id,cash:newUser.cash,first:newUser.first,last:newUser.last,credit:newUser.credit})
                 .then(data=>{
                 console.log('dd',data.data)
                 // setUsersList(data.data)
