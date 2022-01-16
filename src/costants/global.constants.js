@@ -1,1 +1,1 @@
-export const CURRENT_URL =process.env.NODE_ENV === 'development' ? process.env.React_App_Localhost_URL : process.env.React_App_Heroku_Host_URL
+export const CURRENT_URL =process.env.REACT_APP_NODE_ENV === 'development' ? process.env.REACT_APP_LOCALHOST_URL : process.env.REACT_APP_HEROKU_HOST_URL

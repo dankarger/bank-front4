@@ -13,8 +13,8 @@ const[isAddMenu,setIsAddMenu]=useState(false);
 //     const[cash, setCash]=useState(0);
 //     const[credit, setCredit]=useState(0);
 //     const[id, setId]=useState(0);
-const[newUser,setNewUser]=useState({first:'t',
-last:'t',cash:20,credit:10,id:3210})
+const[newUser,setNewUser]=useState({first:'gdfgdfgt',
+last:'gdfgt',cash:20,credit:10,id:3210})
 
     const handleChange=(e)=> {
         setNewUser({[e.target.name]:[...e.target.value]})
@@ -70,14 +70,13 @@ last:'t',cash:20,credit:10,id:3210})
     const addUserToServer= async ()=>{
         try {
             console.log(newUser)
-            await axios.post(URL +'/users',{data:{newUser}, headers: {
-                            'Content-Type': 'application/json',
+            await axios.post(URL +'/users',{data:{id:+newUser.id,cash:+newUser.cash,first:newUser.first,last:newUser.last,credit:+newUser.credit}, headers: {
                             'Accept': 'application/json',
-                            'mode':"no-cors"
+                            // 'mode':"no-cors"
                         }})
                 .then(data=>{
-                console.log('dd',data)
-
+                console.log('dd',data.data)
+                setUsersList(data.data)
                 })
         }catch(e){
          console.log(e)
