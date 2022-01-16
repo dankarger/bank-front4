@@ -71,8 +71,9 @@ last:'gdfgt',cash:20,credit:10,id:3210})
         try {
             console.log(newUser)
             await axios.post(URL +'/users',{data:{id:+newUser.id,cash:+newUser.cash,first:newUser.first,last:newUser.last,credit:+newUser.credit}, headers: {
-                            'Accept': 'application/json',
-                            // 'mode':"no-cors"
+                            // 'Accept': 'application/json',
+                    'Content-Type' : 'text/plain',
+                    // 'mode':"no-cors"
                         }})
                 .then(data=>{
                 console.log('dd',data.data)
