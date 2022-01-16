@@ -13,17 +13,13 @@ last:'gdfgt',cash:'20',credit:'10',id:'3210'})
 
     const handleChange=(e)=> {
         setNewUser({[e.target.name]:e.target.value})
-
         console.log(e.target.value)
-
     }
 
     const deleteUser= async (id)=>{
     try{
         await axios.delete(URL +'/users', {data:{id: +id}})
-            // .then((res)=>res.json())
             .then(data=>{
-
                 setUsersList(data.data)
                 console.log('u',usersList)
             });
@@ -33,10 +29,6 @@ last:'gdfgt',cash:'20',credit:'10',id:'3210'})
     }
     const viewUser=(id)=>{
     }
-
-    // const handleAddUser = () => {
-    //     // http://127.0.0.1:3000/users
-    // }
 
     const showUsers=()=> {
         if(usersList.length>0) {
