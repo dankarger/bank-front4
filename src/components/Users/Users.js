@@ -76,7 +76,7 @@ last:'gdfgt',cash:20,credit:10,id:3210})
                         }})
                 .then(data=>{
                 console.log('dd',data.data)
-                setUsersList(data.data)
+                // setUsersList(data.data)
                 })
         }catch(e){
          console.log(e)
